@@ -70,7 +70,7 @@ imageName, listePersonne = '',[]
 #creation des elements de la fenetre
 
 window = Tk()
-window.geometry("300x3200+300+150")
+window.geometry("600x550")
 window.title("Page d'inscription")
 
 
@@ -89,8 +89,8 @@ validation= Label(contenu, text="Entrez vos informations ici ", font=fontLabel,f
 
 #creation de nos entrées
 
-prenomEntre = Entry(contenu,  fontEntre)
-nomEntre = Entry(contenu,  fontEntre)
+prenomEntre = Entry(contenu,  font=fontEntre)
+nomEntre = Entry(contenu,  font=fontEntre)
 photoEntre = Label(contenu, text="Aucune image selectionner", font= 'arial 8 bold',fg='#ff7800',bg="white" )
 buttonParcourir = Button(contenu,text="Pr",command=parcourir,fg='#ff7800',bg="white")
 
