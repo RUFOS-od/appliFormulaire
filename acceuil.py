@@ -1,8 +1,9 @@
 
+from listdesinscrits import listeInscrit
 from tkinter import *
 from tkinter.filedialog import askopenfilename
 from tkinter.messagebox import  showerror, showinfo
-#from listedesinscrit import listeInscrit
+from listdesinscrits import listeInscrit
 
 #class
 
@@ -70,7 +71,7 @@ imageName, listePersonne = '',[]
 #creation des elements de la fenetre
 
 window = Tk()
-window.geometry("600x550")
+window.geometry("500x520")
 window.title("Page d'inscription")
 
 
@@ -111,12 +112,12 @@ buttonParcourir.grid(row=3,column=1, padx=5,pady=5, sticky=E)
 
 b1 = Button(window,text="Valider",command=valider,width=10, fg='#ff7800',bg="white")
 b2 = Button(window,text="Réinitialiser",command=reinitialiser,width=10, fg='#ff7800',bg="white")
-b3 = Button(window,text="Voir la liste",command="",width=10, fg='#ff7800',bg="white")
+b3 = Button(window,text="Voir la liste",command=lambda:listeInscrit(window,listePersonne),width=10, fg='#ff7800',bg="white")
 
 
 b1.grid(row=4,column=0,pady=5)
 b2.grid(row=5,column=0,pady=5)
-b1.grid(row=6,column=0,pady=5)
+b3.grid(row=6,column=0,pady=5)
 
 
 contenu.grid(row=0,column=0, padx=5,pady=5)
